@@ -1,6 +1,8 @@
 package com.edu.apu.bcd.tutorial2;
 
-public class Transaction {
+import java.io.Serializable;
+
+public class Transaction implements Serializable {
     private String from;
     private String to;
     private String data;
@@ -44,7 +46,7 @@ public class Transaction {
         this.data = data;
     }
 
-    public String getHashData() {
+    public String getTransactionData() {
         return from + to + data;
     }
 }

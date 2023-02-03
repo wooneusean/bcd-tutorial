@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0347e51b-4a6a-4c90-9ddd-9b93b3a1044c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/edu/apu/bcd/tutorial1/Tutorial1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/edu/apu/bcd/tutorial2/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edu/apu/bcd/tutorial2/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/edu/apu/bcd/tutorial2/Blockchain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edu/apu/bcd/tutorial2/Blockchain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/edu/apu/bcd/tutorial2/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edu/apu/bcd/tutorial2/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/edu/apu/bcd/tutorial2/Tutorial2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edu/apu/bcd/tutorial2/Tutorial2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

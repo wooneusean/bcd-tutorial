@@ -3,17 +3,15 @@ package com.edu.apu.bcd.tutorial2;
 import com.edu.apu.bcd.utils.Hasher;
 
 import java.io.Serializable;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.List;
 
 public class Block implements Serializable {
-    public static final int MAX_TRANSACTIONS = 3;
+    public static final int MAX_TRANSACTIONS = 4;
     private final List<Transaction> transactionList = new ArrayList<>();
     private String hash;
     private String previousHash;
+    private String merkleRoot;
     private long timestamp;
 
     public Block(String previousHash) {
@@ -46,6 +44,7 @@ public class Block implements Serializable {
     public String toString() {
         return "{\"Block\":{" +
                "\"transactionList\":" + transactionList +
+               ", \"merkleRoot\":\"" + merkleRoot + '\"' +
                ", \"hash\":\"" + hash + '\"' +
                ", \"previousHash\":\"" + previousHash + '\"' +
                ", \"timestamp\":" + timestamp +
@@ -67,14 +66,17 @@ public class Block implements Serializable {
         this.transactionList.add(txn);
     }
 
-    private String getTransactionsHash() {
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA256");
-            transactionList.forEach(txn -> md.update(txn.getHashData().getBytes()));
-            return Base64.getEncoder().encodeToString(md.digest());
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
+    private String getMerkleRoot() {
+        List<String> merkleNodes = new ArrayList<>(transactionList.stream()
+                                                                  .map(txn -> Hasher.sha256(txn.getTransactionData()))
+                                                                  .toList());
+        while (merkleNodes.size() > 1) {
+            String left = merkleNodes.remove(0);
+            String right = merkleNodes.remove(0);
+            merkleNodes.add(Hasher.sha256(left + right));
         }
+        merkleRoot = merkleNodes.get(0);
+        return merkleNodes.get(0);
     }
 
     public void commit() {
@@ -83,7 +85,7 @@ public class Block implements Serializable {
                         "+",
                         previousHash,
                         String.valueOf(timestamp),
-                        getTransactionsHash()
+                        getMerkleRoot()
                 )
         );
     }
