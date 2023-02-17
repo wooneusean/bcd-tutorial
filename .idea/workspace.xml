@@ -51,10 +51,24 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.edu.apu.bcd.encryption.asymmetric" />
       <recent name="com.edu.apu.bcd.encryption.symmetric" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.AsymmetricMain">
+    <configuration name="AsymmetricMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.edu.apu.bcd.encryption.asymmetric.AsymmetricMain" />
+      <module name="bcd-tutorial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.edu.apu.bcd.encryption.asymmetric.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SymmetricMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.edu.apu.bcd.encryption.symmetric.SymmetricMain" />
       <module name="bcd-tutorial" />
@@ -70,6 +84,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AsymmetricMain" />
         <item itemvalue="Application.SymmetricMain" />
       </list>
     </recent_temporary>
