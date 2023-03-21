@@ -21,7 +21,7 @@ public class AsymmetricMain {
         System.out.println("Private key: " + Base64.getEncoder().encodeToString(lkp.getPrivate().getEncoded()));
         System.out.println("Public key: " + Base64.getEncoder().encodeToString(lkp.getPublic().getEncoded()));
 
-        SymmetricEncryptor se = new SymmetricEncryptor("RSA");
+        AsymmetricEncryptor se = new AsymmetricEncryptor("RSA");
         String cipher = se.encrypt("lorem ipsum dolor sit amet", lkp.getPublic());
         System.out.println(cipher);
         String plain = se.decrypt(cipher, lkp.getPrivate());
